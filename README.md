@@ -28,4 +28,4 @@
 # Thanks and appreciation
 - [Elzero Academy](https://elzero.org/)
 
-- [Rout Academy](https://www.linkedin.com/company/routeacademy/)
+- [Route Academy](https://www.linkedin.com/company/routeacademy/)
