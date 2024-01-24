@@ -1,0 +1,97 @@
+@media (max-width:767px) {
+    .special-header p {
+        width: 100%;
+    }
+     #Services .container {
+        grid-template-columns: repeat( 1 , 1fr );
+        text-align: center;
+    } 
+    .container .srv-content {
+        flex-direction: column;
+    }
+
+    /* Design Section */
+    #design .container {
+        width: 100%;
+        padding: 0;
+    }
+    .design .design-content {
+        width: 100%;
+        padding: 5px;
+        
+    }
+    .design-image {
+        display: none;
+    }
+
+}
+
+
+
+@media (max-width:992px) {
+
+    /* ====== navbar ========== */
+    .check-btn {
+        display: block;
+    }
+
+    nav ul {
+        flex-direction: column;
+        background-color: rgb(0 0 0);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        display: none;
+    }
+
+    nav ul li {
+        padding: 1.5rem;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.521);
+
+
+    }
+
+    nav ul li:hover {
+        background-color: var(--secondary-color);
+    }
+
+    #check:checked~ul {
+        display: block;
+    }
+
+
+    nav::after {
+        display: none;
+    }
+
+    nav ul li a:hover {
+
+        border-bottom: none;
+
+    }
+
+    /* ====== End navbar ========== */
+
+    /* ====== Header ========== */
+
+    header .text {
+        width: 100%;
+        padding: 15px;
+    }
+
+    header .text h3,
+    header .text p {
+        margin-left: 0px;
+        line-height: 1.8;
+    }
+
+    .angel-icon {
+        display: none;
+    }
+
+    /* ======End Header ========== */
+
+
+}
+

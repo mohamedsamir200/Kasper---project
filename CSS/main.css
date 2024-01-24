@@ -1,0 +1,1091 @@
+/*======= Global Rules ==========*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    font-size: 62.5%;
+    /* reset 1rem To equal 10px */
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ========= Global Variable =============*/
+:root {
+    --main-color: #19c8fa;
+    --secondary-color: #185f75;
+    --white-color: #fff;
+    --gray-color: #777;
+    --transparent-color: #185f7594;
+    --margin-top: 7rem;
+    --padding-top: 7rem;
+    --line-height: 1.8;
+    --transition: 0.8s;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    padding: 0px 1rem;
+}
+
+/* =========== special heading ============ */
+.special-header {
+    text-align: center;
+    font-weight: normal;
+}
+
+.special-header h3 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.special-header p {
+    font-size: 1.8rem;
+    font-weight: 600;
+    width: 70%;
+    margin: 3.5rem auto;
+    color: var(--gray-color);
+}
+
+.special-header .special-border {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+}
+
+.special-border::after {
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 0.2rem;
+    background-color: black;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.5rem;
+}
+
+.special-border::before {
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 0.2rem;
+    background-color: black;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1.5rem;
+}
+
+/* =========  special heading ============== */
+
+/* ============================================ */
+
+/* <!-- ======== Nav bar     ===============--> */
+
+nav {
+    background-color: rgb(0 0 0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    position: fixed;
+    width: 100%;
+    z-index: 123;
+}
+
+nav::after {
+    content: "";
+    position: absolute;
+    bottom: 1px;
+    width: 95%;
+    border-bottom: 2px solid white;
+    z-index: -1;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    padding: 0 1rem;
+    color: var(--white-color);
+    transition: var(--transition);
+    padding-bottom: 2.5rem;
+}
+
+nav ul li a:hover {
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+}
+
+nav .nav-icon {
+    font-size: 3rem;
+    color: var(--white-color);
+    cursor: pointer;
+    width: 5rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid var(--white-color);
+}
+
+.toggle-menu {
+    background-color: white;
+    width: 2.5rem;
+    height: 2px;
+    position: relative;
+    cursor: pointer;
+    font-size: 4.5rem;
+    margin-right: 15px;
+    transition: var(--transition);
+}
+
+.toggle-menu::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 2.5rem;
+    height: 2px;
+    background-color: white;
+    transition: var(--transition);
+}
+
+.toggle-menu::before {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    width: 2.5rem;
+    height: 2px;
+    background-color: white;
+    transition: var(--transition);
+}
+
+#check:checked+.check-btn .toggle-menu {
+    background-color: transparent;
+}
+
+#check:checked+.check-btn .toggle-menu::after {
+    top: 0;
+    transform: rotate(45deg);
+}
+
+#check:checked+.check-btn .toggle-menu::before {
+    top: 0;
+    transform: rotate(-45deg);
+}
+
+#check,
+.check-btn {
+    display: none;
+}
+
+/* <!-- ======== End Nav bar     ===============--> */
+
+/* <!-- ======== Header      ===============--> */
+
+header {
+    height: 100vh;
+    background-image: url(../images/landing.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header .layer-header {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0 0 0 / 0.4);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+header .text {
+    background-color: #185f755e;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 50%;
+    color: white;
+    padding: 60px;
+}
+
+header .text h3 {
+    line-height: var(--line-height);
+    margin-left: 35px;
+}
+
+header .text p {
+    margin-top: 10px;
+    line-height: 1.2;
+    margin-left: 3.5rem;
+}
+
+.angel-icon {
+    font-size: 6rem;
+    color: white;
+    margin: 0px 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.bullets {
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    bottom: 20px;
+    left: 50%;
+    border: 1px solid var(--main-color);
+
+    background-color: var(--main-color);
+}
+
+.bullets::before {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    bottom: -2px;
+    left: 30px;
+    border: 1px solid white;
+}
+
+.bullets::after {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    bottom: -2px;
+    right: 30px;
+    border: 1px solid white;
+}
+
+/* <!-- ======== End Header     ===============--> */
+
+/* <!-- ======== Services     ===============--> */
+section {
+    margin-top: var(--margin-top);
+}
+
+#Services .container {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+#Services .container .srv-content {
+    font-size: 4rem;
+    display: flex;
+    line-height: var(--line-height);
+    transition: var(--transition);
+    padding: 1.5rem;
+}
+
+.srv-content:hover {
+    box-shadow: 5px 5px 15px rgba(0 0 0 / 0.4);
+}
+
+.srv-caption h3 {
+    color: var(--main-color);
+    font-size: 20px;
+}
+
+.srv-caption p {
+    margin: 1.5rem 0;
+    color: var(--gray-color);
+}
+
+.srv-icon {
+    font-size: 5rem;
+    margin-top: -3rem;
+    margin-right: 2rem;
+}
+
+/* <!-- ======== End Services     ===============--> */
+
+/* <!-- ========  Design     ===============--> */
+#design {
+    background-image: url(../images/design-features.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+
+.design {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.design .design-content {
+    background-color: #185f7594;
+    flex: 1;
+    padding: 20px 50px;
+    color: white;
+    font-size: 3.5rem;
+    margin-right: -11%;
+}
+
+.design .design-content h3 {
+    margin: 15px 0px;
+}
+
+.design-content ul li {
+    font-size: 1.8rem;
+    padding: 15px 0px;
+}
+
+.design-content ul li i {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.design-image {
+    width: 250px;
+    position: relative;
+    top: 50px;
+}
+
+.design-image img {
+    width: 100%;
+    display: block;
+}
+
+/* <!-- ======== End Design     ===============--> */
+
+/* <!-- ======== Portfolio   ===============--> */
+#Portfolio ul {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+#Portfolio ul li {
+    padding: 0px 8px;
+}
+
+#Portfolio ul li a {
+    color: black;
+    font-size: 2rem;
+    transition: var(--transition);
+}
+
+#Portfolio ul li a:focus,
+#Portfolio ul li a:hover {
+    color: var(--main-color);
+}
+
+.shuffle {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shuffle figcaption {
+    font-size: 1.8rem;
+    line-height: var(--line-height);
+    background-color: white;
+    transition: var(--transition);
+    position: absolute;
+    bottom: -30%;
+    width: 100%;
+}
+
+.shuffle figcaption :last-child {
+    color: var(--main-color);
+}
+
+figure {
+    flex-basis: 25%;
+    position: relative;
+    overflow: hidden;
+}
+
+.shuffle img {
+    width: 100%;
+    display: block;
+    transition: var(--transition);
+}
+
+figure:hover img {
+    transform: rotate(5deg) scale(1.2);
+}
+
+figure:hover figcaption {
+    bottom: 0;
+}
+
+@media (max-width: 767px) {
+    figure {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    figure {
+        flex-basis: 33.333%;
+    }
+}
+
+@media (min-width: 992px) {
+    figure {
+        flex-basis: 25%;
+    }
+}
+
+/* <!-- ======== End portfolio     ===============--> */
+
+/* <!-- ======== Video     ===============--> */
+
+.show-video {
+    position: relative;
+}
+
+.show-video video {
+    width: 100%;
+}
+
+.show-video::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+}
+
+.show-video .text {
+    color: white;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 50px;
+    line-height: var(--line-height);
+    background-color: var(--transparent-color);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.show-video .text button {
+    font-size: 1rem;
+    background-color: black;
+    padding: 15px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* <!-- ======== End pVideo     ===============--> */
+
+/* <!-- ======== About   ===============--> */
+.about {
+    text-align: center;
+    overflow: hidden;
+}
+
+.about img {
+    position: relative;
+    top: 100px;
+    margin-top: -100px;
+    max-width: 100%;
+}
+
+@media (max-width: 767px) {
+    .about img {
+        top: 60px;
+        margin-top: -60px;
+    }
+}
+
+/* <!-- ======== End About   ===============--> */
+
+/* <!-- ======== stats   ===============--> */
+
+.stats {
+    background-image: url(../images/stats.png);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    margin-top: 0;
+    padding: 40px;
+}
+
+.stats::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+}
+
+.stats .container {
+    position: relative;
+    z-index: 1;
+    background-color: var(--transparent-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-content {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    line-height: var(--line-height);
+    margin: 50px 0px;
+}
+
+.stats-content i {
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+@media (max-width: 767px) {
+    .stats-content {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .stats-content {
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .stats-content {
+        width: 25%;
+    }
+}
+
+/* <!-- ======== end stats   ===============--> */
+
+/* <!-- ========  testimonial & skills  ===============--> */
+.testimonial-skills .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.testimonial,
+.skills {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: normal;
+    padding: 0px 10px;
+    margin-bottom: 50px;
+}
+
+.testimonial h3,
+.skills h3 {
+    margin: 15px;
+}
+
+.testimonial p,
+.skills p {
+    line-height: 1.5;
+    color: var(--gray-color);
+}
+
+.card {
+    font-size: 2.5rem;
+    margin: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--gray-color);
+}
+
+.card-caption {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card img {
+    width: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.card-caption p {
+    line-height: var(--line-height);
+}
+
+.card>p {
+    text-align: end;
+    color: var(--gray-color);
+}
+
+.progress-skills h3 {
+    font-size: 1.3rem;
+}
+
+.progress-skills .progress {
+    width: 100%;
+    height: 40px;
+    background-color: #eee;
+    margin: 10px 0px;
+}
+
+.progress-skills .progress span {
+    display: block;
+    height: 100%;
+    background-color: var(--main-color);
+    position: relative;
+}
+
+.prog-90 {
+    width: 90%;
+}
+
+.prog-85 {
+    width: 85%;
+}
+
+.prog-80 {
+    width: 80%;
+}
+
+.prog-75 {
+    width: 75%;
+}
+
+.progress span::before {
+    content: attr(data-progress);
+    position: absolute;
+    width: 30px;
+    height: 20px;
+    background-color: black;
+    right: -14px;
+    top: -70%;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    padding: 0px 0px;
+    border-radius: 4px;
+    padding-top: 2px;
+}
+
+.progress span::after {
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    right: -9px;
+    top: -25%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+@media (max-width: 992px) {
+    .card-caption {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .card-caption img {
+        margin: 15px 0px;
+    }
+
+    .testimonial-skills .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* <!-- ======== End testimonial & skills  ===============--> */
+
+/* <!-- ======== Quote  ===============--> */
+.quote {
+    background-image: url(../images/quote.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    position: relative;
+    padding: 40px;
+}
+
+.quote::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.quote .text {
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.quote .text p {
+    margin-top: 20px;
+}
+
+/* <!-- ======== end Quote  ===============--> */
+
+/* <!-- ======== Pricing  ===============--> */
+.pricing {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 20px;
+}
+
+.numbers {
+    text-align: center;
+}
+
+.numbers .text {
+    margin: 15px;
+    padding: 40px;
+    border-top: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+}
+
+.numbers .text p {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+}
+
+.numbers .text h1 {
+    font-size: 4rem;
+    position: relative;
+}
+
+.numbers .text h1::before {
+    content: "$";
+    position: absolute;
+    top: -20px;
+    left: -23px;
+    font-size: 2rem;
+}
+
+.numbers .text h1::after {
+    content: "/M";
+    position: absolute;
+    bottom: -5px;
+    right: -45px;
+    font-size: 2rem;
+}
+
+.numbers .links ul {
+    padding: 0px 20px;
+    margin-top: 40px;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.numbers .links li {
+    font-size: 1.5rem;
+    margin: 15px 10px;
+    padding-bottom: 15px;
+}
+
+.numbers .links li:not(:last-child) {
+    border-bottom: 1px solid var(--main-color);
+}
+
+.numbers button {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: white;
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.numbers button:hover {
+    background-color: var(--main-color);
+    color: white;
+}
+
+/* <!-- ======== End Pricing  ===============--> */
+
+/* <!-- ======== subscribe ===============--> */
+.subscribe {
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    position: relative;
+    padding: 50px;
+}
+
+.subscribe::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.subscribe .container {
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 40px 0px;
+    color: white;
+}
+
+.subscribe .container form {
+    font-size: 1.5rem;
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+
+.subscribe .container form input[type="email"] {
+    width: 100%;
+    padding: 15px 15px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid var(--main-color);
+    border-right: none;
+    color: white;
+    caret-color: var(--main-color);
+}
+
+.subscribe .container form input[type="submit"] {
+    padding: 15px 15px;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    color: white;
+    cursor: pointer;
+}
+
+.subscribe .container form input[type="email"]::placeholder {
+    color: white;
+}
+
+.subscribe .container p {
+    width: 55%;
+    font-size: 1.3rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 992px) {
+    .subscribe .container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .subscribe .container form {
+        width: 100%;
+    }
+
+    .subscribe .container p {
+        width: 100%;
+        margin-top: 15px;
+        text-align: center;
+    }
+}
+
+/* <!-- ======== end subscribe ===============--> */
+
+/* <!-- ========  Contact us ===============--> */
+#Contact .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#Contact .container form {
+    font-size: 1.5rem;
+    width: 75%;
+}
+
+#Contact .container form input,
+form textarea {
+    display: block;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 10px 15px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+#Contact .container form button {
+    padding: 15px 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: 1px solid white;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: var(--transition);
+    right: 0;
+    display: flex;
+    margin-left: auto;
+}
+
+#Contact .container form button:hover {
+    background-color: #13afdb;
+}
+
+.contact-text {
+    text-align: center;
+    line-height: 1.5;
+    width: 25%;
+}
+
+.contact-text .text h2 {
+    font-size: 2rem;
+    margin: 10px 0px;
+}
+
+.contact-text .text li {
+    font-size: 1.5rem;
+    padding: 10px 0px;
+    color: #777;
+}
+
+@media (max-width: 992px) {
+    #Contact .container {
+        flex-direction: column-reverse;
+    }
+
+    #Contact .container form {
+        width: 100%;
+    }
+
+    .contact-text {
+        width: 100%;
+        margin-top: 15px;
+    }
+}
+
+/* <!-- ======== End Contact us ===============--> */
+
+/* <!-- ========  Footer ===============-->  */
+.footer {
+    margin-top: var(--margin-top);
+    background-image: url(../images/subscribe.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+
+    position: relative;
+    padding: 50px 0px;
+}
+
+.footer::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.footer .container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 3rem;
+    color: white;
+}
+
+.footer .container p:not(:last-child) {
+    padding: 15px 0px;
+    position: relative;
+    border-bottom: 1px solid white;
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.footer .footer-icon i {
+    padding: 20px 10px;
+    font-size: 1.7rem;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.footer .footer-icon i:hover {
+    color: var(--main-color);
+    transform: scale(1.1);
+}
+
+.footer span {
+    font-size: 1.7rem;
+    color: var(--main-color);
+}
+
+/* <!-- ======== End Footer ===============-->  */
