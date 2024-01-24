@@ -5,9 +5,9 @@
   projects.
 
 # Links 
-- Source Code : <a href="https://github.com/mohamedsamir200/Kasper-project" target="_blank"> HERE </a>
+- Source Code : <a href="https://github.com/mohamedsamir200/Kasper-project"> HERE </a>
 
-- Live Site : <a href="https://mohamedsamir200.github.io/Kasper-project/" target="_blank"> HERE </a>
+- Live Site : <a href="https://mohamedsamir200.github.io/Kasper-project/"> HERE </a>
 
 # My Process 
 [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/fr/) 
